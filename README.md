@@ -1,4 +1,4 @@
-# pdf-comp
+# pdfcomp
 ### PDF File Visual Comparison Tool
 
 This tool is mainly intended for testing environments where PDF files are generated programmatically, and should be exactly the same from one test run to the next.  It uses a bitmap comparison, so even the smallest differences in appearance will not be tolerated (some amount of fuzziness can be introduced by decreasing render resolution).  At the same time, the internal structure of the file and any non-visible features are not compared.
@@ -25,7 +25,7 @@ $ wget https://dl.xpdfreader.com/xpdf-tools-linux-4.05.tar.gz
 $ tar -xzvf xpdf-tools-linux-4.05.tar.gz
 [move appropriate binaries into your PATH]
 $ go install github.com/pdfcpu/pdfcpu/cmd/pdfcpu@latest
-$ go install github.com/mdmcconnell/pdf-comp@latest
+$ go install github.com/mdmcconnell/pdfcomp@latest
 ```
 
 ## API Usage
@@ -43,7 +43,7 @@ Have a look at cli.go for an example of how to use EqualPDFs
 ```
 
 ## Command Line Operation
-Usage: pdf-comp [options] file1.pdf file2.pdf 
+Usage: pdfcomp [options] file1.pdf file2.pdf 
 
 ### Options
 
@@ -74,4 +74,4 @@ This works especially well for fixed-width fonts (with variable-width, an entire
 ![Lorem comparison][def]
 
 
-[def]: https://github.com/mdmcconnell/pdf-comp/blob/f8abf71bbb09771c9b248301c2e9822cee40a101/assets/loremM.pdf-1-diff.png "Differences highlighted"
+[def]: https://github.com/mdmcconnell/pdfcomp/blob/f8abf71bbb09771c9b248301c2e9822cee40a101/assets/loremM.pdf-1-diff.png "Differences highlighted"
