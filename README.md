@@ -19,10 +19,10 @@ Some nice near-term improvements would be: perform image difference highlight fi
 
 ## Installation
 It's important to use a recent version of XpdfReader - specifically *not* the Ubuntu package poppler-utils.  As of this writing, version 0.85 of pdftoppm included in poppler-utils is broken for output to stdout and will cause the program to fail.
-Try using 
+Try doing something like
 ```
 $ wget https://dl.xpdfreader.com/xpdf-tools-linux-4.05.tar.gz
-$ tar -xzvf xpdf-tools-linux-4.05.targz
+$ tar -xzvf xpdf-tools-linux-4.05.tar.gz
 [move appropriate binaries into your PATH]
 $ go install github.com/pdfcpu/pdfcpu/cmd/pdfcpu@latest
 $ go install github.com/mdmcconnell/pdf-comp@latest
