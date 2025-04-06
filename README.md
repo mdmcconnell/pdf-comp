@@ -57,9 +57,12 @@ Usage: pdf-comp [options] file1.pdf file2.pdf
 
 ### Exit Codes
 
- __0__ The two PDFs are visually equivalent
- __1__ The two PDFs are not visually equivalent
- __2__ The program has encountered some error before completing (and normally printed an error message)
+ __0__ 
+ The two PDFs are visually equivalent
+ __1__ 
+ The two PDFs are not visually equivalent
+ __2__ 
+ The program has encountered some error before completing (and normally printed an error message)
 
 ## Example Comparison Output
 This works especially well for fixed-width fonts (with variable-width, an entire line of text after the first different character will be highlighted).
