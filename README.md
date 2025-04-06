@@ -56,12 +56,12 @@ Usage: pdf-comp [options] file1.pdf file2.pdf
 **-radius=** *integer* radius of difference highlight circles to output, default 5pts.  Only meaninfgul if **images** is set
 
 ### Exit Codes
-
- __0__ 
+ 
+ __ 0 __ 
  The two PDFs are visually equivalent
- __1__ 
+ __ 1 __ 
  The two PDFs are not visually equivalent
- __2__ 
+ __ 2 __ 
  The program has encountered some error before completing (and normally printed an error message)
 
 ## Example Comparison Output
