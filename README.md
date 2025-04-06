@@ -11,7 +11,7 @@ We can imagine some more interesting ways to compare PDFs, for example:
 
 But pdf-comp does none of those.  It just generates images for each page in the files using [pdftoppm](https://www.xpdfreader.com/pdftoppm-man.html) and checks if they are the same.  Optionally, it generates a side-by-side comparison image of differing pages, with the differences highlighted.
 
-There is a command line program detailed below, but the real use of this package is 
+There is a command line program detailed below, but the real use of this package is to includimport it in an automated testing suite.
 
 This code is inspired by SerHack's [pdf-diff](https://github.com/serhack/pdf-diff).  So thanks!  It leans heavily on Horst Rutter's amazing golang PDF processor, [pdfcpu](https://pdfcpu.io/). Also, Google's Gemini has made a significant contribution.
 
