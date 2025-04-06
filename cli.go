@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"io"
 	"os"
+
+	"github.com/mdmcconnell/pdfcomp/pdfcomp"
 )
 
 func main() {
@@ -39,7 +41,7 @@ func main() {
 		defer f.Close()
 	}
 
-	same, err := EqualPDFs(file1, file2, images, w, resolution, ratio)
+	same, err := pdfcomp.EqualPDFs(file1, file2, images, w, resolution, ratio)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "%s", err.Error())
 		os.Exit(2)
