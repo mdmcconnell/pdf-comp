@@ -13,7 +13,7 @@ But pdf-comp does none of those.  It just generates images for each page in the 
 
 There is a command line program detailed below, but the real use of this package is 
 
-This code is inspired by SerHack's [pdf-diff](https://github.com/serhack/pdf-diff).  So thanks!  It leans heavily on Horst Rutter's amazing golang PDF processor, pdfcpu. Also, Google's Gemini has made a significant contribution.
+This code is inspired by SerHack's [pdf-diff](https://github.com/serhack/pdf-diff).  So thanks!  It leans heavily on Horst Rutter's amazing golang PDF processor, [pdfcpu](https://pdfcpu.io/). Also, Google's Gemini has made a significant contribution.
 
 ## Installation
 It's important to use a recent version of XpdfReader.- specifically *not* the Ubuntu package poppler-utils.  As of this writing, version 0.85 of pdftoppm included in poppler-utils is broken for output to stdout and will cause the program to fail.
