@@ -57,11 +57,11 @@ Usage: pdf-comp [options] file1.pdf file2.pdf
 
 ### Exit Codes
  
- __ 0 __ 
+ __0__ 
  The two PDFs are visually equivalent
- __ 1 __ 
+ __1__ 
  The two PDFs are not visually equivalent
- __ 2 __ 
+ __2__ 
  The program has encountered some error before completing (and normally printed an error message)
 
 ## Example Comparison Output
