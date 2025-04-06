@@ -1,4 +1,4 @@
-module github.com/mdmcconnell/pdf-comp
+module github.com/mdmcconnell/pdfcomp
 
 go 1.23.0
 
