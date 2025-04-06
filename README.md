@@ -53,7 +53,7 @@ Usage: pdfcomp [options] file1.pdf file2.pdf
 
 **-resolution=** *integer* dpi resolution for creating bitmaps, default 300dpi.  May impact performance.
 
-**-radius=** *integer* radius of difference highlight circles to output, default 5pts.  Only meaninfgul if **images** is set
+**-ratio=** *integer* divide dpi by this number to determine the radius of difference highlight circles to output, default 30.  Only meaninfgul if **images** is set
 
 ### Exit Codes
  
