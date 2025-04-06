@@ -16,7 +16,7 @@ There is a command line program detailed below, but the real use of this package
 This code is inspired by SerHack's [pdf-diff](https://github.com/serhack/pdf-diff).  So thanks!  It leans heavily on Horst Rutter's amazing golang PDF processor, [pdfcpu](https://pdfcpu.io/). Also, Google's Gemini has made a significant contribution.
 
 ## Installation
-It's important to use a recent version of XpdfReader.- specifically *not* the Ubuntu package poppler-utils.  As of this writing, version 0.85 of pdftoppm included in poppler-utils is broken for output to stdout and will cause the program to fail.
+It's important to use a recent version of XpdfReader - specifically *not* the Ubuntu package poppler-utils.  As of this writing, version 0.85 of pdftoppm included in poppler-utils is broken for output to stdout and will cause the program to fail.
 Try using 
 ```
 $ wget https://dl.xpdfreader.com/xpdf-tools-linux-4.05.tar.gz
