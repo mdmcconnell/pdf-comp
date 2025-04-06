@@ -29,7 +29,7 @@ $ go install github.com/mdmcconnell/pdf-comp@latest
 ## API Usage
 Have a look at cli.go for an example of how to use EqualPDFs
 ```
-	same, err := EqualPDFs(file1, file2, images, png, resolution, ratio)
+	same, err := EqualPDFs(file1, file2, images, w, resolution, ratio)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "%s", err.Error())
 	} else if same {
