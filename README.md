@@ -20,6 +20,8 @@ It's important to use a recent version of XpdfReader.- specifically *not* the Ub
 Try using 
 ```
 $ wget https://dl.xpdfreader.com/xpdf-tools-linux-4.05.tar.gz
+$ tar -xzvf xpdf-tools-linux-4.05.targz
+[move appropriate binaries into your PATH]
 $ go install github.com/pdfcpu/pdfcpu/cmd/pdfcpu@latest
 $ go install github.com/mdmcconnell/pdf-comp@latest
 ```
@@ -51,7 +53,7 @@ Usage: pdf-comp [options] file1.pdf file2.pdf
 
 **-radius=** *integer* radius of difference highlight circles to output, default 5pts.  Only meaninfgul if **images** is set
 
-## Exit Codes
+### Exit Codes
 0    The two PDFs are visually equivalent
 1    The two PDFs are not visually equivalent
 2    The program has encountered some error before completing (and normally printed an error message)
