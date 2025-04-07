@@ -109,7 +109,7 @@ func EqualPDFs(file1, file2 string, images bool, pdf io.Writer, resolution, rati
 		}
 
 	} // for all pages
-	if pdf != nil {
+	if pdf != nil && !same {
 		err = BuildPDF(pngFiles, pdf)
 		if err != nil {
 			return false, err
