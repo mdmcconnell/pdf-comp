@@ -13,7 +13,7 @@ func main() {
 	iP := flag.Bool("images", false, "generate comparison images of pages that are different")
 	pP := flag.Bool("pdf", false, "generate comparison images of pages that are different")
 	rP := flag.Int("resolution", 300, "dpi resolution for comparison bitmaps")
-	ratP := flag.Int("ratio", 30, "divide resolution by this  to determine the radius for difference outline circles")
+	ratP := flag.Int("ratio", 30, "divide resolution by this to determine the radius for difference outline circles")
 	flag.Parse()
 	fileArgs := flag.Args()
 	images := *iP
