@@ -34,9 +34,13 @@ func equalImgMatrix(mat1 [][]byte, mat2 [][]byte, diff bool) (bool, [][]bool, er
 	}
 
 	if diff {
-		fmt.Fprintf(os.Stderr, "generating difference files for matrices %dx%d\n", len(mat1), len(mat1[0]))
+		if GlobDebug {
+			fmt.Fprintf(os.Stderr, "generating difference files for matrices %dx%d\n", len(mat1), len(mat1[0]))
+		}
 		diff, err := diffMatrix(mat1, mat2)
-		fmt.Fprintf(os.Stderr, "received difference matrix %dx%d\n", len(diff), len(diff[0]))
+		if GlobDebug {
+			fmt.Fprintf(os.Stderr, "received difference matrix %dx%d\n", len(diff), len(diff[0]))
+		}
 		if err != nil {
 			return false, nil, err
 		}
@@ -124,7 +128,9 @@ func ppmToMatrix(rd io.Reader) ([][]byte, error) {
 	}
 
 	// Parse pixel data
-	fmt.Fprintf(os.Stderr, "parsing pixel data, width=%d, height=%d, maxColor=%d, isBinary=%t\n", width, height, maxColor, isBinary)
+	if GlobDebug {
+		fmt.Fprintf(os.Stderr, "parsing pixel data, width=%d, height=%d, maxColor=%d, isBinary=%t\n", width, height, maxColor, isBinary)
+	}
 	pixels := make([][]byte, height)
 	for y := range height {
 		pixels[y] = make([]byte, width*3)
@@ -152,7 +158,9 @@ func ppmToMatrix(rd io.Reader) ([][]byte, error) {
 			}
 		}
 	}
-	fmt.Fprintf(os.Stderr, "finished parsing pixel data\n")
+	if GlobDebug {
+		fmt.Fprintf(os.Stderr, "finished parsing pixel data\n")
+	}
 
 	return pixels, nil
 }

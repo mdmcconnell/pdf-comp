@@ -19,6 +19,8 @@ import (
 	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/types"
 )
 
+var GlobDebug = false
+
 // Compare two PDF files, and return true if they are visually the same.  Some messages
 // may be printed to stderr.
 // If images is set, will write png files highlighting the differences in each page.
@@ -28,7 +30,9 @@ import (
 // Does not check if resolution and ratio are sensible.  Try 150 and 30.
 func EqualPDFs(file1, file2 string, images bool, pdf io.Writer, resolution, ratio int) (bool, error) {
 	if file1 == file2 {
-		fmt.Fprintf(os.Stderr, "two files are the same: %s\n", file1)
+		if GlobDebug {
+			fmt.Fprintf(os.Stderr, "two files are the same: %s\n", file1)
+		}
 		return true, nil
 	}
 
@@ -42,7 +46,9 @@ func EqualPDFs(file1, file2 string, images bool, pdf io.Writer, resolution, rati
 	}
 
 	if pages1 != pages2 {
-		fmt.Fprintf(os.Stderr, "two files have different numbers of pages, %s: %d, %s: %d\n", file1, pages1, file2, pages2)
+		if GlobDebug {
+			fmt.Fprintf(os.Stderr, "two files have different numbers of pages, %s: %d, %s: %d\n", file1, pages1, file2, pages2)
+		}
 		if !images {
 			return false, nil
 		}
