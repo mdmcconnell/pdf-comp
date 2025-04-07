@@ -132,7 +132,10 @@ func PageCount(filename string) (int, error) {
 	conf.Cmd = model.LISTINFO
 
 	ctx, err := api.ReadAndValidate(rs, conf)
-	return ctx.PageCount, err
+	if err != nil {
+		return 0, err
+	}
+	return ctx.PageCount, nil
 }
 
 func PdfToPPM(filename string, page, resolution int) (io.Reader, error) {
