@@ -48,7 +48,7 @@ func EqualPDFs(file1, file2 string, images bool, pdf io.Writer, resolution, rati
 		}
 	}
 
-	same := false
+	same := true
 	pngFiles := []PageFile{}
 
 	for i := range pages1 {
