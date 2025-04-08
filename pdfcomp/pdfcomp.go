@@ -120,6 +120,9 @@ func EqualPDFs(file1, file2 string, images bool, pdf io.Writer, resolution, rati
 		if err != nil {
 			return false, err
 		}
+		for f := range pngFiles {
+			os.Remove(pngFiles[f].filename)
+		}
 	}
 	if same {
 		return true, nil
